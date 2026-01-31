@@ -1,5 +1,4 @@
-# TechSolutions Website - Design Update
-
+# TechSolutions Website 
 ## Overview
 This website has been completely redesigned to match the clean, modern aesthetic from the provided design reference. The new design features a light, minimalist approach with professional styling.
 
