@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Science Projects | TechSolutions</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <a href="index.html" class="logo" aria-label="TechSolutions Home">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15" stroke="#4A9B7F" stroke-width="2"/>
+            <path d="M10 16L14 20L22 12" stroke="#4A9B7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero domain-hero">
+  <div class="container">
+    <a href="index.html#projects" class="back-link">← Back to Domains</a>
+    <h1 class="hero-title">Data Science - ML & AI</h1>
+    <p class="hero-subtitle">
+      Machine learning models, predictive analytics, and AI-powered solutions
+    </p>
+  </div>
+</section>
+
+<!-- ================= ONGOING PROJECTS ================= -->
+<section class="domain-projects-section">
+  <div class="container">
+    <h2 class="section-title">Ongoing Projects</h2>
+    <p class="section-subtitle">Projects currently in development</p>
+    
+    <div class="domain-projects-grid">
+      <!-- Project 1 -->
+      <div class="domain-project-card" data-project="ds-ongoing-1">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">DS-2026-001</span>
+        </div>
+        <h3 class="project-card-title">Customer Churn Prediction Model</h3>
+        <p class="project-card-desc">ML model to predict customer churn for telecom companies using historical data and behavioral patterns.</p>
+        <div class="project-card-tech">
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>Pandas</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('ds-ongoing-1')">View Details</button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="domain-project-card" data-project="ds-ongoing-2">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">DS-2026-002</span>
+        </div>
+        <h3 class="project-card-title">Medical Image Diagnosis AI</h3>
+        <p class="project-card-desc">Deep learning model for automated detection of diseases from X-ray and MRI images with high accuracy.</p>
+        <div class="project-card-tech">
+          <span>PyTorch</span>
+          <span>OpenCV</span>
+          <span>CNN</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('ds-ongoing-2')">View Details</button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="domain-project-card" data-project="ds-ongoing-3">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">DS-2026-003</span>
+        </div>
+        <h3 class="project-card-title">NLP-based Document Summarizer</h3>
+        <p class="project-card-desc">Natural language processing system for automatic summarization of legal and business documents.</p>
+        <div class="project-card-tech">
+          <span>Transformers</span>
+          <span>BERT</span>
+          <span>Hugging Face</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('ds-ongoing-3')">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPLETED PROJECTS ================= -->
+<section class="domain-projects-section completed-section">
+  <div class="container">
+    <h2 class="section-title">Completed Projects</h2>
+    <p class="section-subtitle">Successfully delivered projects</p>
+    
+    <div class="domain-projects-grid">
+      <!-- Project 1 -->
+      <div class="domain-project-card" data-project="ds-completed-1">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">DS-2025-018</span>
+        </div>
+        <h3 class="project-card-title">E-Commerce Delivery Delay Prediction</h3>
+        <p class="project-card-desc">Predictive model for estimating delivery delays based on order, logistics, and external factors.</p>
+        <div class="project-card-tech">
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>XGBoost</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('ds-completed-1')">View Details</button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="domain-project-card" data-project="ds-completed-2">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">DS-2025-014</span>
+        </div>
+        <h3 class="project-card-title">Sales Forecasting Dashboard</h3>
+        <p class="project-card-desc">Time series forecasting model with interactive dashboard for retail sales prediction and inventory planning.</p>
+        <div class="project-card-tech">
+          <span>Prophet</span>
+          <span>Plotly</span>
+          <span>Streamlit</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('ds-completed-2')">View Details</button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="domain-project-card" data-project="ds-completed-3">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">DS-2025-010</span>
+        </div>
+        <h3 class="project-card-title">Sentiment Analysis for Social Media</h3>
+        <p class="project-card-desc">Real-time sentiment analysis tool for monitoring brand perception across social media platforms.</p>
+        <div class="project-card-tech">
+          <span>NLTK</span>
+          <span>Twitter API</span>
+          <span>Flask</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('ds-completed-3')">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT MODALS ================= -->
+
+<!-- Modal for ds-ongoing-1 -->
+<div id="modal-ds-ongoing-1" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('ds-ongoing-1')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>DS-2026-001</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Customer Churn Prediction Model</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Machine learning model to predict customer churn for telecom companies. The solution includes:<br><br>
+          • Feature engineering from customer usage patterns<br>
+          • Ensemble model combining Random Forest and Neural Networks<br>
+          • Real-time scoring API for integration<br>
+          • Dashboard for churn risk visualization<br>
+          • Automated retraining pipeline with new data
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>TeleConnect Services Ltd.</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Machine Learning / Predictive Analytics</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Python, TensorFlow, Pandas, Scikit-learn, FastAPI, Docker</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Jupyter Notebooks</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Model Architecture</div>
+            <div class="screenshot-placeholder">Dashboard Preview</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for ds-ongoing-2 -->
+<div id="modal-ds-ongoing-2" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('ds-ongoing-2')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>DS-2026-002</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Medical Image Diagnosis AI</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Deep learning system for automated medical image analysis. Features include:<br><br>
+          • CNN-based classification for X-ray images<br>
+          • Detection of pneumonia, tuberculosis, and other conditions<br>
+          • Explainable AI with heat map visualizations<br>
+          • HIPAA-compliant data processing<br>
+          • Integration with hospital PACS systems
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Regional Healthcare Network</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Deep Learning / Healthcare AI</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>PyTorch, OpenCV, ResNet, Grad-CAM, FastAPI, DICOM</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Research Paper</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Detection Results</div>
+            <div class="screenshot-placeholder">Heat Map Analysis</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for ds-ongoing-3 -->
+<div id="modal-ds-ongoing-3" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('ds-ongoing-3')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>DS-2026-003</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>NLP-based Document Summarizer</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          AI-powered document summarization for legal and business documents. Features:<br><br>
+          • Extractive and abstractive summarization options<br>
+          • Multi-document summarization capability<br>
+          • Key entity and clause extraction<br>
+          • Support for multiple document formats<br>
+          • API and web interface for easy access
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Legal Tech Solutions Inc.</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Natural Language Processing</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Transformers, BERT, T5, Hugging Face, Streamlit, AWS Lambda</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Demo App</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Input Document</div>
+            <div class="screenshot-placeholder">Generated Summary</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for ds-completed-1 -->
+<div id="modal-ds-completed-1" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('ds-completed-1')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>DS-2025-018</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>E-Commerce Product Delivery Delay Prediction</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Predictive model for estimating delivery delays in e-commerce logistics. The solution includes:<br><br>
+          • Analysis of historical delivery data and patterns<br>
+          • Integration of weather, traffic, and holiday factors<br>
+          • Real-time delay probability scoring<br>
+          • Proactive customer notification system<br>
+          • Logistics optimization recommendations
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>QuickShip E-Commerce Platform</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Machine Learning / Logistics</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Python, Scikit-learn, XGBoost, Pandas, PostgreSQL, Flask</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Case Study</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Prediction Dashboard</div>
+            <div class="screenshot-placeholder">Model Performance</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for ds-completed-2 -->
+<div id="modal-ds-completed-2" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('ds-completed-2')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>DS-2025-014</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Sales Forecasting Dashboard</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Time series forecasting system for retail sales prediction. Features:<br><br>
+          • Multiple forecasting models (Prophet, ARIMA, LSTM)<br>
+          • Interactive dashboard with drill-down capability<br>
+          • Seasonal trend analysis and anomaly detection<br>
+          • Inventory replenishment recommendations<br>
+          • Export reports for business planning
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>RetailMax Stores</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Time Series Analysis / Business Intelligence</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Prophet, Plotly, Streamlit, PostgreSQL, Docker</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">Live Dashboard</a> |
+          <a href="#" class="project-link">GitHub Repository</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Forecast Chart</div>
+            <div class="screenshot-placeholder">Trend Analysis</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for ds-completed-3 -->
+<div id="modal-ds-completed-3" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('ds-completed-3')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>DS-2025-010</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Sentiment Analysis for Social Media</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Real-time sentiment analysis tool for brand monitoring. Features include:<br><br>
+          • Multi-platform data collection (Twitter, Facebook, Instagram)<br>
+          • Real-time sentiment scoring and classification<br>
+          • Trend detection and alert system<br>
+          • Competitor sentiment comparison<br>
+          • Automated reporting and insights generation
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>BrandWatch Marketing Agency</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>NLP / Social Media Analytics</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>NLTK, VADER, Twitter API, Flask, MongoDB, Redis</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">Live Tool</a> |
+          <a href="#" class="project-link">GitHub Repository</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Sentiment Dashboard</div>
+            <div class="screenshot-placeholder">Trend Analysis</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 TechSolutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

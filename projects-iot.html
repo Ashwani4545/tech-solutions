@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IoT Projects | TechSolutions</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <a href="index.html" class="logo" aria-label="TechSolutions Home">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15" stroke="#4A9B7F" stroke-width="2"/>
+            <path d="M10 16L14 20L22 12" stroke="#4A9B7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero domain-hero">
+  <div class="container">
+    <a href="index.html#projects" class="back-link">← Back to Domains</a>
+    <h1 class="hero-title">Internet of Things</h1>
+    <p class="hero-subtitle">
+      Smart devices, sensors, and connected systems for intelligent automation
+    </p>
+  </div>
+</section>
+
+<!-- ================= ONGOING PROJECTS ================= -->
+<section class="domain-projects-section">
+  <div class="container">
+    <h2 class="section-title">Ongoing Projects</h2>
+    <p class="section-subtitle">Projects currently in development</p>
+    
+    <div class="domain-projects-grid">
+      <!-- Project 1 -->
+      <div class="domain-project-card" data-project="iot-ongoing-1">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">IOT-2026-001</span>
+        </div>
+        <h3 class="project-card-title">Smart Agriculture Monitoring System</h3>
+        <p class="project-card-desc">IoT-based crop monitoring system with soil sensors, weather tracking, and automated irrigation control.</p>
+        <div class="project-card-tech">
+          <span>Arduino</span>
+          <span>ESP32</span>
+          <span>MQTT</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('iot-ongoing-1')">View Details</button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="domain-project-card" data-project="iot-ongoing-2">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">IOT-2026-002</span>
+        </div>
+        <h3 class="project-card-title">Industrial Equipment Monitoring</h3>
+        <p class="project-card-desc">Real-time monitoring system for industrial machinery with predictive maintenance alerts and analytics.</p>
+        <div class="project-card-tech">
+          <span>Raspberry Pi</span>
+          <span>LoRaWAN</span>
+          <span>AWS IoT</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('iot-ongoing-2')">View Details</button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="domain-project-card" data-project="iot-ongoing-3">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">IOT-2026-003</span>
+        </div>
+        <h3 class="project-card-title">Smart City Traffic Management</h3>
+        <p class="project-card-desc">Intelligent traffic signal control system using real-time vehicle detection and flow optimization algorithms.</p>
+        <div class="project-card-tech">
+          <span>OpenCV</span>
+          <span>TensorFlow</span>
+          <span>Edge Computing</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('iot-ongoing-3')">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPLETED PROJECTS ================= -->
+<section class="domain-projects-section completed-section">
+  <div class="container">
+    <h2 class="section-title">Completed Projects</h2>
+    <p class="section-subtitle">Successfully delivered projects</p>
+    
+    <div class="domain-projects-grid">
+      <!-- Project 1 -->
+      <div class="domain-project-card" data-project="iot-completed-1">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">IOT-2025-012</span>
+        </div>
+        <h3 class="project-card-title">Smart Home Automation System</h3>
+        <p class="project-card-desc">Complete home automation solution with voice control, mobile app, and energy monitoring features.</p>
+        <div class="project-card-tech">
+          <span>ESP8266</span>
+          <span>Node-RED</span>
+          <span>MQTT</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('iot-completed-1')">View Details</button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="domain-project-card" data-project="iot-completed-2">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">IOT-2025-009</span>
+        </div>
+        <h3 class="project-card-title">Environmental Monitoring Network</h3>
+        <p class="project-card-desc">Distributed sensor network for air quality, temperature, and humidity monitoring across urban areas.</p>
+        <div class="project-card-tech">
+          <span>Arduino</span>
+          <span>ZigBee</span>
+          <span>ThingsBoard</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('iot-completed-2')">View Details</button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="domain-project-card" data-project="iot-completed-3">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">IOT-2025-006</span>
+        </div>
+        <h3 class="project-card-title">Fleet GPS Tracking System</h3>
+        <p class="project-card-desc">Real-time vehicle tracking system with route optimization, driver behavior monitoring, and fuel management.</p>
+        <div class="project-card-tech">
+          <span>GPS Module</span>
+          <span>GSM</span>
+          <span>Google Maps API</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('iot-completed-3')">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT MODALS ================= -->
+
+<!-- Modal for iot-ongoing-1 -->
+<div id="modal-iot-ongoing-1" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('iot-ongoing-1')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>IOT-2026-001</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Smart Agriculture Monitoring System</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          This project develops an IoT-based precision agriculture system to optimize crop yield and resource usage. The solution includes:<br><br>
+          • Soil moisture, pH, and nutrient level sensors<br>
+          • Weather station integration for microclimate monitoring<br>
+          • Automated drip irrigation based on sensor data<br>
+          • Mobile app for real-time monitoring and alerts<br>
+          • Historical data analysis for crop planning
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>AgriTech Farms Cooperative</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Hardware / Agriculture</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Arduino Mega, ESP32, Soil Sensors, MQTT Protocol, React Native App</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Hardware Schematics</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Sensor Setup</div>
+            <div class="screenshot-placeholder">Dashboard View</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for iot-ongoing-2 -->
+<div id="modal-iot-ongoing-2" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('iot-ongoing-2')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>IOT-2026-002</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Industrial Equipment Monitoring</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Real-time industrial machinery monitoring for predictive maintenance. Features include:<br><br>
+          • Vibration and temperature sensors on critical equipment<br>
+          • Anomaly detection using machine learning algorithms<br>
+          • Predictive maintenance scheduling<br>
+          • Integration with existing SCADA systems<br>
+          • Cloud-based analytics and reporting
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Steel Manufacturing Industries Ltd.</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Hardware / Industrial IoT</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Raspberry Pi 4, LoRaWAN, AWS IoT Core, Python, Grafana</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Documentation</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Hardware Setup</div>
+            <div class="screenshot-placeholder">Analytics Dashboard</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for iot-ongoing-3 -->
+<div id="modal-iot-ongoing-3" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('iot-ongoing-3')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>IOT-2026-003</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Smart City Traffic Management</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Intelligent traffic management system for urban congestion reduction. The solution includes:<br><br>
+          • AI-powered vehicle detection and counting<br>
+          • Dynamic traffic signal timing based on real-time flow<br>
+          • Emergency vehicle priority routing<br>
+          • Integration with navigation apps for route suggestions<br>
+          • Central monitoring dashboard for traffic authorities
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Smart City Municipal Corporation</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Hardware / Smart City</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>NVIDIA Jetson, OpenCV, TensorFlow Lite, Edge Computing, 5G</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Project Demo</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Detection System</div>
+            <div class="screenshot-placeholder">Control Dashboard</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for iot-completed-1 -->
+<div id="modal-iot-completed-1" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('iot-completed-1')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>IOT-2025-012</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Smart Home Automation System</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Complete smart home automation solution for residential properties. Features include:<br><br>
+          • Voice control integration with Alexa and Google Assistant<br>
+          • Lighting, HVAC, and appliance automation<br>
+          • Energy consumption monitoring and optimization<br>
+          • Security system with motion sensors and cameras<br>
+          • Mobile app for remote control and scheduling
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Premium Homes Builder</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Hardware / Home Automation</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>ESP8266, Node-RED, MQTT, Home Assistant, React Native</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Demo Video</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Mobile App</div>
+            <div class="screenshot-placeholder">Hardware Installation</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for iot-completed-2 -->
+<div id="modal-iot-completed-2" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('iot-completed-2')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>IOT-2025-009</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Environmental Monitoring Network</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Distributed environmental sensor network for urban monitoring. Features:<br><br>
+          • Air quality index (AQI) measurement<br>
+          • Temperature, humidity, and pressure sensors<br>
+          • Noise pollution monitoring<br>
+          • Public dashboard for citizen access<br>
+          • API for third-party app integration
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Environmental Protection Agency</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Hardware / Environmental</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Arduino Nano, ZigBee Mesh Network, ThingsBoard, PostgreSQL</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">Live Dashboard</a> |
+          <a href="#" class="project-link">GitHub Repository</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Sensor Node</div>
+            <div class="screenshot-placeholder">Public Dashboard</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for iot-completed-3 -->
+<div id="modal-iot-completed-3" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('iot-completed-3')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>IOT-2025-006</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Fleet GPS Tracking System</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Comprehensive fleet management and GPS tracking solution. Features include:<br><br>
+          • Real-time vehicle location tracking<br>
+          • Route optimization and geofencing alerts<br>
+          • Driver behavior monitoring (speed, harsh braking)<br>
+          • Fuel consumption tracking and theft detection<br>
+          • Maintenance scheduling based on mileage
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>LogiTrans Shipping Company</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Hardware / Transportation & Logistics</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>GPS Module (NEO-6M), SIM800L GSM, Google Maps API, Node.js</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">Live Tracking Demo</a> |
+          <a href="#" class="project-link">GitHub Repository</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Tracking Map</div>
+            <div class="screenshot-placeholder">Fleet Dashboard</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 TechSolutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

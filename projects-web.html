@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Development Projects | TechSolutions</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <a href="index.html" class="logo" aria-label="TechSolutions Home">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15" stroke="#4A9B7F" stroke-width="2"/>
+            <path d="M10 16L14 20L22 12" stroke="#4A9B7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero domain-hero">
+  <div class="container">
+    <a href="index.html#projects" class="back-link">← Back to Domains</a>
+    <h1 class="hero-title">Web Development</h1>
+    <p class="hero-subtitle">
+      Modern, responsive websites and web applications built with cutting-edge technologies
+    </p>
+  </div>
+</section>
+
+<!-- ================= ONGOING PROJECTS ================= -->
+<section class="domain-projects-section">
+  <div class="container">
+    <h2 class="section-title">Ongoing Projects</h2>
+    <p class="section-subtitle">Projects currently in development</p>
+    
+    <div class="domain-projects-grid">
+      <!-- Project 1 -->
+      <div class="domain-project-card" data-project="web-ongoing-1">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">WEB-2026-001</span>
+        </div>
+        <h3 class="project-card-title">E-Commerce Platform Redesign</h3>
+        <p class="project-card-desc">Complete redesign and development of an e-commerce platform with modern UI/UX and enhanced performance.</p>
+        <div class="project-card-tech">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('web-ongoing-1')">View Details</button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="domain-project-card" data-project="web-ongoing-2">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">WEB-2026-002</span>
+        </div>
+        <h3 class="project-card-title">Healthcare Portal Development</h3>
+        <p class="project-card-desc">Building a comprehensive healthcare management portal for hospitals with appointment scheduling and patient records.</p>
+        <div class="project-card-tech">
+          <span>Next.js</span>
+          <span>PostgreSQL</span>
+          <span>AWS</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('web-ongoing-2')">View Details</button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="domain-project-card" data-project="web-ongoing-3">
+        <div class="project-card-header">
+          <span class="project-status ongoing">Ongoing</span>
+          <span class="project-id">WEB-2026-003</span>
+        </div>
+        <h3 class="project-card-title">Real Estate Listing Platform</h3>
+        <p class="project-card-desc">Developing a property listing and management platform with virtual tours and advanced search features.</p>
+        <div class="project-card-tech">
+          <span>Vue.js</span>
+          <span>Express</span>
+          <span>MySQL</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('web-ongoing-3')">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPLETED PROJECTS ================= -->
+<section class="domain-projects-section completed-section">
+  <div class="container">
+    <h2 class="section-title">Completed Projects</h2>
+    <p class="section-subtitle">Successfully delivered projects</p>
+    
+    <div class="domain-projects-grid">
+      <!-- Project 1 -->
+      <div class="domain-project-card" data-project="web-completed-1">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">WEB-2025-015</span>
+        </div>
+        <h3 class="project-card-title">Tourism Website (KashiDarshanam)</h3>
+        <p class="project-card-desc">A comprehensive tourism portal showcasing religious and cultural heritage sites in Varanasi with booking features.</p>
+        <div class="project-card-tech">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('web-completed-1')">View Details</button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="domain-project-card" data-project="web-completed-2">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">WEB-2025-012</span>
+        </div>
+        <h3 class="project-card-title">Restaurant Management System</h3>
+        <p class="project-card-desc">Full-stack web application for restaurant operations including online ordering, table reservations, and inventory management.</p>
+        <div class="project-card-tech">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Firebase</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('web-completed-2')">View Details</button>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="domain-project-card" data-project="web-completed-3">
+        <div class="project-card-header">
+          <span class="project-status completed">Completed</span>
+          <span class="project-id">WEB-2025-008</span>
+        </div>
+        <h3 class="project-card-title">Educational Learning Platform</h3>
+        <p class="project-card-desc">Online learning management system with video courses, quizzes, progress tracking, and certificate generation.</p>
+        <div class="project-card-tech">
+          <span>Angular</span>
+          <span>Django</span>
+          <span>PostgreSQL</span>
+        </div>
+        <button class="btn-view-details" onclick="openModal('web-completed-3')">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT MODALS ================= -->
+
+<!-- Modal Template for web-ongoing-1 -->
+<div id="modal-web-ongoing-1" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('web-ongoing-1')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>WEB-2026-001</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>E-Commerce Platform Redesign</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          This project involves a complete redesign and redevelopment of an existing e-commerce platform to improve user experience, performance, and scalability. The solution includes:<br><br>
+          • Modern responsive UI with improved navigation and product discovery<br>
+          • Enhanced shopping cart and checkout experience<br>
+          • Integration with multiple payment gateways<br>
+          • Real-time inventory management system<br>
+          • Advanced analytics dashboard for business insights
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>RetailTech Solutions Pvt. Ltd.</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Web Application</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>React, Node.js, MongoDB, Redis, AWS, Stripe API</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Development Preview</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Screenshot 1</div>
+            <div class="screenshot-placeholder">Screenshot 2</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Template for web-ongoing-2 -->
+<div id="modal-web-ongoing-2" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('web-ongoing-2')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>WEB-2026-002</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Healthcare Portal Development</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Development of a comprehensive healthcare management portal for multi-specialty hospitals. The solution includes:<br><br>
+          • Online appointment scheduling with doctor availability<br>
+          • Electronic Health Records (EHR) management<br>
+          • Lab reports and prescription management<br>
+          • Telemedicine integration for remote consultations<br>
+          • Insurance claim processing module
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>MedCare Hospital Group</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Healthcare Web Application</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Next.js, PostgreSQL, AWS, HIPAA Compliant Infrastructure</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Staging Environment</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Dashboard Preview</div>
+            <div class="screenshot-placeholder">Appointment Module</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Template for web-ongoing-3 -->
+<div id="modal-web-ongoing-3" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('web-ongoing-3')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>WEB-2026-003</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Real Estate Listing Platform</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Building a modern property listing platform for real estate agencies. Key features include:<br><br>
+          • Advanced property search with filters and map integration<br>
+          • 360° virtual property tours<br>
+          • Agent dashboard for property management<br>
+          • Lead management and CRM integration<br>
+          • Mortgage calculator and financing options
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>HomeFind Realty</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Real Estate Web Platform</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Vue.js, Express, MySQL, Google Maps API, Three.js</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge ongoing">Ongoing</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">GitHub Repository</a> |
+          <a href="#" class="project-link">Demo Site</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Property Listing</div>
+            <div class="screenshot-placeholder">Virtual Tour</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Template for web-completed-1 -->
+<div id="modal-web-completed-1" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('web-completed-1')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>WEB-2025-015</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Tourism Website (KashiDarshanam)</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          A comprehensive tourism portal for Varanasi showcasing the city's rich religious and cultural heritage. Features include:<br><br>
+          • Interactive map of temples, ghats, and heritage sites<br>
+          • Virtual darshan and 360° views of famous temples<br>
+          • Hotel and accommodation booking integration<br>
+          • Event calendar for festivals and ceremonies<br>
+          • Multi-language support for international tourists
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Varanasi Tourism Department</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Tourism & Hospitality</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>HTML5, CSS3, JavaScript, PHP, MySQL</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">Live Website</a> |
+          <a href="#" class="project-link">GitHub Repository</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Homepage</div>
+            <div class="screenshot-placeholder">Temple Gallery</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Template for web-completed-2 -->
+<div id="modal-web-completed-2" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('web-completed-2')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>WEB-2025-012</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Restaurant Management System</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Full-stack web application for complete restaurant operations management. Key features:<br><br>
+          • Online food ordering with customization options<br>
+          • Table reservation system with floor planning<br>
+          • Kitchen display system for order management<br>
+          • Inventory tracking with low-stock alerts<br>
+          • Sales analytics and reporting dashboard
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>Spice Garden Restaurant Chain</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Food & Hospitality</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>React, Node.js, Firebase, Stripe</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">Live Demo</a> |
+          <a href="#" class="project-link">GitHub Repository</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Order Dashboard</div>
+            <div class="screenshot-placeholder">Analytics View</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Template for web-completed-3 -->
+<div id="modal-web-completed-3" class="project-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('web-completed-3')">&times;</button>
+    <h2 class="modal-title">PROJECT DETAILS</h2>
+    <table class="project-details-table">
+      <tr>
+        <th>Project ID</th>
+        <td>WEB-2025-008</td>
+      </tr>
+      <tr>
+        <th>Project Title</th>
+        <td>Educational Learning Platform</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <strong>Problem Statement</strong><br><br>
+          Online learning management system for educational institutions and corporate training. Features include:<br><br>
+          • Video course creation and management<br>
+          • Interactive quizzes and assessments<br>
+          • Progress tracking with learning paths<br>
+          • Certificate generation upon completion<br>
+          • Discussion forums and live Q&A sessions
+        </td>
+      </tr>
+      <tr>
+        <th>Client</th>
+        <td>EduTech Learning Academy</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>Education Technology</td>
+      </tr>
+      <tr>
+        <th>Technology Stack</th>
+        <td>Angular, Django, PostgreSQL, AWS S3</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span class="status-badge completed">Completed</span></td>
+      </tr>
+      <tr>
+        <th>Links</th>
+        <td>
+          <a href="#" class="project-link">Live Platform</a> |
+          <a href="#" class="project-link">GitHub Repository</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Screenshots</th>
+        <td>
+          <div class="modal-screenshots">
+            <div class="screenshot-placeholder">Course Dashboard</div>
+            <div class="screenshot-placeholder">Quiz Interface</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 TechSolutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

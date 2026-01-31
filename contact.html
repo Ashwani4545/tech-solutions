@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | TechSolutions</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <a href="index.html" class="logo" aria-label="TechSolutions Home">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15" stroke="#4A9B7F" stroke-width="2"/>
+            <path d="M10 16L14 20L22 12" stroke="#4A9B7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      
+      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h1 class="contact-title">Get in Touch</h1>
+        <p class="contact-desc">
+          Tell us about your project or requirement. We'll get back to you soon.
+        </p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number (Optional)</label>
+          <input type="tel" id="phone" name="phone" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="user_type">I am a</label>
+          <select id="user_type" name="user_type" required class="form-input">
+            <option value="">Select one</option>
+            <option value="Student">Student</option>
+            <option value="Company">Company</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Message / Requirement</label>
+          <textarea 
+            name="message" 
+            rows="5" 
+            required 
+            class="form-input"
+            title="Please enter your message or requirement"
+            placeholder="Type your message or requirement here"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 TechSolutions. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

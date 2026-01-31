@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | TechSolutions</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <a href="index.html" class="logo" aria-label="TechSolutions Home">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15" stroke="#4A9B7F" stroke-width="2"/>
+            <path d="M10 16L14 20L22 12" stroke="#4A9B7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <p class="hero-label">PORTFOLIO</p>
+    <h1 class="hero-title">
+      Practical, Impactful Work
+    </h1>
+    <p class="hero-subtitle">
+      A snapshot of recent projects across software engineering and data science,<br>
+      built with modern stacks and delivered end-to-end.
+    </p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-cta">Start a Project</a>
+      <a href="#projects" class="btn-secondary">View Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="portfolio-section">
+  <div class="container">
+    <h2 class="section-title">Selected Work</h2>
+    <p class="section-subtitle">
+      Representative builds spanning web platforms, data products, and automation.
+    </p>
+    
+    <div class="portfolio-grid">
+      <article class="portfolio-card">
+        <div class="card-tag">Full-stack</div>
+        <h3>Project Marketplace</h3>
+        <p class="card-desc">
+          Platform connecting students with real projects; role-based access, payments,
+          and analytics dashboards.
+        </p>
+        <ul class="card-tech">
+          <li><strong>Tech:</strong> Next.js, Node, PostgreSQL, Stripe</li>
+          <li><strong>Outcome:</strong> Reduced onboarding friction and improved delivery tracking.</li>
+        </ul>
+        <span class="card-link">Demo & code on request</span>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="card-tag">Data Science</div>
+        <h3>Demand Forecasting</h3>
+        <p class="card-desc">
+          Time-series models to forecast demand for multi-region inventory; alerts and
+          reporting for ops teams.
+        </p>
+        <ul class="card-tech">
+          <li><strong>Tech:</strong> Python, Prophet, Pandas, Airflow</li>
+          <li><strong>Outcome:</strong> Improved stock accuracy and reduced overage.</li>
+        </ul>
+        <span class="card-link">Notebooks & deck on request</span>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="card-tag">Automation</div>
+        <h3>Workflow Automation</h3>
+        <p class="card-desc">
+          Automated data ingestion and QA pipelines with alerting; reduced manual effort
+          for weekly ops.
+        </p>
+        <ul class="card-tech">
+          <li><strong>Tech:</strong> Node, Python, Airflow, Slack webhooks</li>
+          <li><strong>Outcome:</strong> Faster reporting cycles and fewer defects.</li>
+        </ul>
+        <span class="card-link">Demo available</span>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="card-tag">E-Commerce</div>
+        <h3>Online Store Platform</h3>
+        <p class="card-desc">
+          Complete e-commerce solution with inventory management, payment processing,
+          and customer analytics.
+        </p>
+        <ul class="card-tech">
+          <li><strong>Tech:</strong> React, Express, MongoDB, PayPal API</li>
+          <li><strong>Outcome:</strong> Increased sales conversion and customer retention.</li>
+        </ul>
+        <span class="card-link">Live demo available</span>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="card-tag">Mobile App</div>
+        <h3>Fitness Tracker</h3>
+        <p class="card-desc">
+          Cross-platform mobile app for tracking workouts, nutrition, and health metrics
+          with social features.
+        </p>
+        <ul class="card-tech">
+          <li><strong>Tech:</strong> React Native, Firebase, Node.js</li>
+          <li><strong>Outcome:</strong> 10k+ downloads with 4.5-star rating.</li>
+        </ul>
+        <span class="card-link">Download on stores</span>
+      </article>
+
+      <article class="portfolio-card">
+        <div class="card-tag">Dashboard</div>
+        <h3>Analytics Dashboard</h3>
+        <p class="card-desc">
+          Real-time business intelligence dashboard with custom visualizations and
+          automated reporting.
+        </p>
+        <ul class="card-tech">
+          <li><strong>Tech:</strong> Vue.js, D3.js, Python, PostgreSQL</li>
+          <li><strong>Outcome:</strong> Reduced reporting time by 70%.</li>
+        </ul>
+        <span class="card-link">Case study available</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Let's build your next launch</h2>
+      <p>Tell me about your idea, and I'll suggest the fastest path to impact.</p>
+      <a href="contact.html" class="btn-cta">Contact</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 TechSolutions. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
