@@ -51,23 +51,23 @@
 
       <form id="contact-form" class="contact-form">
         <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required class="form-input">
+          <label>Full Name</label>
+          <input type="text" name="name" required class="form-input" placeholder="Enter your full name" title="Full Name">
         </div>
 
         <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required class="form-input">
+          <label>Email Address</label>
+          <input type="email" name="email" required class="form-input" placeholder="Enter your email address" title="Email Address">
         </div>
 
         <div class="form-group">
-          <label for="phone">Phone Number (Optional)</label>
-          <input type="tel" id="phone" name="phone" class="form-input">
+          <label>Phone Number (Optional)</label>
+          <input type="tel" name="phone" class="form-input" placeholder="Enter your phone number" title="Phone Number">
         </div>
 
         <div class="form-group">
-          <label for="user_type">I am a</label>
-          <select id="user_type" name="user_type" required class="form-input">
+          <label for="user_type_select">I am a</label>
+          <select id="user_type_select" name="user_type" required class="form-input">
             <option value="">Select one</option>
             <option value="Student">Student</option>
             <option value="Company">Company</option>
@@ -76,14 +76,7 @@
 
         <div class="form-group">
           <label>Message / Requirement</label>
-          <textarea 
-            name="message" 
-            rows="5" 
-            required 
-            class="form-input"
-            title="Please enter your message or requirement"
-            placeholder="Type your message or requirement here"
-          ></textarea>
+          <textarea name="message" rows="5" required class="form-input" placeholder="Type your message or requirement here" title="Message or Requirement"></textarea>
         </div>
 
         <button type="submit" class="btn-submit">Submit Request</button>
@@ -101,6 +94,7 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>

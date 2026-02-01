@@ -1370,50 +1370,6 @@ body {
 /* ===================================
    CONTACT STYLES
    =================================== */
-.services-section-alt {
-  background: var(--color-white);
-}
-
-.cta-section {
-  padding: 5rem 0;
-  background: var(--color-primary);
-  text-align: center;
-}
-
-.cta-content h2 {
-  font-size: 2.5rem;
-  color: var(--color-white);
-  margin-bottom: 1rem;
-}
-
-.cta-content p {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 2rem;
-}
-
-.cta-section .btn-cta {
-  background: var(--color-white);
-  color: var(--color-primary);
-}
-
-.cta-section .btn-cta:hover {
-  background: var(--color-bg);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.nav-links a.active {
-  color: var(--color-primary);
-}
-
-
-
-
-/* ===================================
-   CONTACT STYLES
-   =================================== */
-
 .nav-links a.active {
   color: var(--color-primary);
 }

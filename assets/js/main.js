@@ -2,8 +2,17 @@
 // TECHSOLUTIONS - MAIN JAVASCRIPT
 // =========================================
 
+// ====== EMAILJS CONFIGURATION ======
+// Replace these with your actual EmailJS credentials
+const EMAILJS_CONFIG = {
+  SERVICE_ID: 'service_05zf0yn',        // Replace with your EmailJS Service ID
+  TEMPLATE_ID: 'template_x7z6a38',      // Replace with your EmailJS Template ID
+  PUBLIC_KEY: 'pCtvNKYyuU5EBCHS_'         // Replace with your EmailJS Public Key
+};
+
 // ====== DOM Content Loaded ======
 document.addEventListener('DOMContentLoaded', function() {
+  initEmailJS();
   initMobileMenu();
   initContactForm();
   initSmoothScroll();
@@ -11,6 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
   initNavbarScroll();
   logPageView();
 });
+
+// ====== Initialize EmailJS ======
+function initEmailJS() {
+  // Check if EmailJS library is loaded
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    console.log('EmailJS initialized successfully');
+  } else {
+    console.warn('EmailJS library not loaded. Please include the EmailJS script.');
+  }
+}
 
 // ====== Mobile Menu Toggle ======
 function initMobileMenu() {
@@ -69,7 +89,7 @@ function initMobileMenu() {
   }
 }
 
-// ====== Contact Form Handler ======
+// ====== Contact Form Handler with EmailJS ======
 function initContactForm() {
   const contactForm = document.getElementById('contact-form');
   
@@ -88,7 +108,7 @@ function initContactForm() {
       const data = {
         name: formData.get('name'),
         email: formData.get('email'),
-        phone: formData.get('phone'),
+        phone: formData.get('phone') || 'Not provided',
         user_type: formData.get('user_type'),
         message: formData.get('message'),
         timestamp: new Date().toISOString()
@@ -111,33 +131,76 @@ function initContactForm() {
         return;
       }
       
-      // Simulate sending (replace with actual API call in production)
-      setTimeout(() => {
-        // Log to console (in production, send to backend/email service)
-        console.log('Form submitted:', data);
+      // Send email using EmailJS
+      if (typeof emailjs !== 'undefined') {
+        // Prepare template parameters
+        const templateParams = {
+          from_name: data.name,
+          from_email: data.email,
+          phone: data.phone,
+          user_type: data.user_type,
+          message: data.message,
+          timestamp: new Date().toLocaleString()
+        };
         
-        // Save to localStorage for demo
+        // Send email via EmailJS
+        emailjs.send(
+          EMAILJS_CONFIG.SERVICE_ID,
+          EMAILJS_CONFIG.TEMPLATE_ID,
+          templateParams
+        )
+        .then(function(response) {
+          console.log('Email sent successfully!', response.status, response.text);
+          
+          // Save to localStorage as backup
+          try {
+            const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
+            submissions.push(data);
+            localStorage.setItem('submissions', JSON.stringify(submissions));
+          } catch (e) {
+            console.error('Error saving to localStorage:', e);
+          }
+          
+          // Show success notification
+          showNotification('Thank you! We received your message. We\'ll be in touch shortly.', 'success');
+          
+          // Reset form
+          contactForm.reset();
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          
+          // Optional: Redirect after delay
+          // setTimeout(() => {
+          //   window.location.href = 'index.html';
+          // }, 2000);
+        })
+        .catch(function(error) {
+          console.error('EmailJS Error:', error);
+          
+          // Show error notification
+          showNotification('Failed to send message. Please try again or contact us directly.', 'error');
+          
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        });
+      } else {
+        // Fallback if EmailJS is not loaded
+        console.error('EmailJS library not loaded');
+        showNotification('Email service not configured. Please contact us directly.', 'error');
+        
+        // Save to localStorage as fallback
         try {
           const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
           submissions.push(data);
           localStorage.setItem('submissions', JSON.stringify(submissions));
+          console.log('Form data saved to localStorage:', data);
         } catch (e) {
           console.error('Error saving to localStorage:', e);
         }
         
-        // Show success notification
-        showNotification('Thank you! We received your message. We\'ll be in touch shortly.', 'success');
-        
-        // Reset form
-        this.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-        
-        // Optional: Redirect after delay
-        // setTimeout(() => {
-        //   window.location.href = 'index.html';
-        // }, 2000);
-      }, 1500);
+      }
     });
     
     // Real-time validation
