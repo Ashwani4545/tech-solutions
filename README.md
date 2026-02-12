@@ -2,46 +2,6 @@
 ## Overview
 This website has been completely redesigned to match the clean, modern aesthetic from the provided design reference. The new design features a light, minimalist approach with professional styling.
 
-## Key Design Changes
-
-### Color Scheme
-- **Background**: Warm off-white/beige (#F5F3EF)
-- **Primary Color**: Professional green (#4A9B7F)
-- **White Cards**: Clean white (#FFFFFF)
-- **Text**: Dark gray (#1A1A1A) with lighter variations
-
-### Typography
-- **Font Family**: DM Sans (Google Fonts)
-- Modern, clean, and highly readable
-- Better hierarchy with varied weights (400, 500, 700)
-
-### Layout Updates
-1. **Navigation Bar**
-   - Sticky header with white background
-   - Simple logo icon (checkmark in circle)
-   - Clean navigation links
-   - Green CTA button
-
-2. **Hero Section**
-   - Large, bold typography
-   - Minimal gradient background
-   - Clear call-to-action buttons
-
-3. **Services Section**
-   - Six service cards with custom SVG icons
-   - Clean card design with hover effects
-   - Grid layout that's responsive
-
-4. **Projects Section**
-   - Device mockups (laptop and phone)
-   - Realistic screen content
-   - Visual representations of different project types
-
-5. **About Section**
-   - Simple two-column layout
-   - Clear messaging
-   - Prominent CTA button
-
 ## File Structure
 ```
 ├── index.html

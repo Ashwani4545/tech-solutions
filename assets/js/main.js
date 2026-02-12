@@ -1,13 +1,21 @@
+// Track "Get Started" button click
+function trackGetStarted() {
+  if (typeof gtag === 'function') {
+    gtag('event', 'get_started_click', {
+      event_category: 'engagement',
+      event_label: 'Hero Section'
+    });
+  }
+}
 // =========================================
 // TECHSOLUTIONS - MAIN JAVASCRIPT
 // =========================================
 
 // ====== EMAILJS CONFIGURATION ======
-// Replace these with your actual EmailJS credentials
 const EMAILJS_CONFIG = {
-  SERVICE_ID: 'service_05zf0yn',        // Replace with your EmailJS Service ID
-  TEMPLATE_ID: 'template_x7z6a38',      // Replace with your EmailJS Template ID
-  PUBLIC_KEY: 'pCtvNKYyuU5EBCHS_'         // Replace with your EmailJS Public Key
+  SERVICE_ID: 'service_05zf0yn',        
+  TEMPLATE_ID: 'template_x7z6a38',      
+  PUBLIC_KEY: 'pCtvNKYyuU5EBCHS_'         
 };
 
 // ====== DOM Content Loaded ======
@@ -105,6 +113,14 @@ function initContactForm() {
       
       // Get form data
       const formData = new FormData(this);
+      // Honeypot spam protection
+      if (formData.get('company')) {
+        // If the hidden field is filled, treat as spam and abort
+        showNotification('Spam detected. Submission blocked.', 'error');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        return;
+      }
       const data = {
         name: formData.get('name'),
         email: formData.get('email'),
@@ -163,6 +179,14 @@ function initContactForm() {
           
           // Show success notification
           showNotification('Thank you! We received your message. We\'ll be in touch shortly.', 'success');
+                
+                // Google Analytics event for contact form submission
+                if (typeof gtag === 'function') {
+                  gtag('event', 'contact_form_submitted', {
+                    event_category: 'engagement',
+                    event_label: 'Contact Page'
+                  });
+                }
           
           // Reset form
           contactForm.reset();
