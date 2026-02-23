@@ -1,3 +1,70 @@
+/* ================= AUTHORITY LINE ================= */
+.authority-line {
+  text-align: center;
+  font-size: 1.08rem;
+  color: #3A7A64;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+/* ================= CREDIBILITY POINTS ================= */
+.credibility-points {
+  max-width: 700px;
+  margin: 1.2rem auto 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  color: #4A9B7F;
+}
+.credibility-points ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.credibility-points li {
+  margin: 0;
+}
+/* ================= STATS BAR ================= */
+.stats-bar {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 0.7rem 0 0.6rem 0;
+  position: relative;
+}
+.stats-bar::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: var(--color-border);
+  margin: 0.5rem auto 0 auto;
+  opacity: 0.5;
+}
+
+.stats-bar-inner {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.stat-item {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+.stat-number {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 800;
+  margin-right: 0.2rem;
+}
 /* ===================================
    RESET & BASE STYLES
    =================================== */
@@ -115,7 +182,7 @@ body {
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
@@ -639,9 +706,7 @@ body {
    RESPONSIVE DESIGN
    =================================== */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
+  /* Remove display:none so .nav-links can be toggled visible with .mobile-active */
   
   .hero-title {
     font-size: 3rem;
@@ -723,16 +788,18 @@ body {
     position: fixed;
     top: 70px;
     left: 0;
-    right: 0;
+    width: 100vw;
     background: var(--color-white);
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transform: translateY(-120%);
     opacity: 0;
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 2000;
     gap: 1.5rem;
+    display: flex;
+    align-items: center;
   }
   
   .nav-links.mobile-active {
