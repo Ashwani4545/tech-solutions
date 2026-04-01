@@ -2,66 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Innovative technology solutions for businesses and students. Web development, app development, AI solutions.">
-  <meta name="keywords" content="web development, app development, student projects, tech solutions, AI services">
-  <meta name="author" content="TechSolutions">
-  <meta property="og:title" content="TechSolutions">
-  <meta property="og:description" content="Bridging students and industry through real-world projects.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Data Science, ML & AI projects by Infinity Tech Nexus — predictive models, NLP, and analytics.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Data Science Projects | TechSolutions</title>
+  <title>Data Science Projects | Infinity Tech Nexus</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-XXXXXXX');
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+<div class="scroll-progress"></div>
+<nav class="navbar"><div class="container"><div class="nav-content">
+  <a href="index.html" class="logo" aria-label="Home"><div class="infinity-logo"><svg viewBox="0 0 60 30" fill="none"><defs><linearGradient id="infinityGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#10B981"/><stop offset="50%" stop-color="#3B82F6"/><stop offset="100%" stop-color="#10B981"/></linearGradient></defs><path d="M15 15C15 8 8 4 4 10C0 16 4 26 15 15C26 4 30 16 26 22C22 28 15 22 15 15Z" stroke="url(#infinityGradient)"/><path d="M45 15C45 22 52 26 56 20C60 14 56 4 45 15C34 26 30 14 34 8C38 2 45 8 45 15Z" stroke="url(#infinityGradient)"/></svg></div><span class="logo-text">Infinity Tech Nexus</span></a>
+  <div class="nav-links"><a href="services.html">Services</a><a href="projects.html" class="active">Projects</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="nav-actions"><button class="theme-toggle" aria-label="Toggle dark mode">🌙</button><button class="mobile-menu-btn" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="3" y1="12" x2="21" y2="12" stroke-width="2"/><line x1="3" y1="6" x2="21" y2="6" stroke-width="2"/><line x1="3" y1="18" x2="21" y2="18" stroke-width="2"/></svg></button><a href="contact.html" class="btn-primary">Get a Free Quote</a></div>
+</div></div></nav>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-  <div class="container">
-    <div class="nav-content">
-      <a href="index.html" class="logo" aria-label="TechSolutions Home">
-        <div class="logo-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <circle cx="16" cy="16" r="15" stroke="#4A9B7F" stroke-width="2"/>
-            <path d="M10 16L14 20L22 12" stroke="#4A9B7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </a>
-      
-      <div class="nav-links">
-        <a href="services.html">Services</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      
-      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
-    </div>
-  </div>
-</nav>
-
-<!-- ================= HERO ================= -->
 <section class="hero domain-hero">
+  <canvas id="hero-canvas"></canvas>
   <div class="container">
-    <a href="index.html#projects" class="back-link">← Back to Domains</a>
-    <h1 class="hero-title">Data Science - ML & AI</h1>
-    <p class="hero-subtitle">
-      Machine learning models, predictive analytics, and AI-powered solutions
-    </p>
+    <a href="projects.html" class="back-link">← Back to Domains</a>
+    <h1 class="hero-title">Data Science — ML & AI</h1>
+    <p class="hero-subtitle">Machine learning models, predictive analytics, and AI-powered solutions</p>
   </div>
 </section>
 
@@ -567,12 +529,15 @@
   </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2026 TechSolutions. All rights reserved.</p>
-  </div>
-</footer>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="logo-text" style="font-size:1.5rem;margin-bottom:1rem;">∞ Infinity Tech Nexus</div><p>Empowering students and businesses with practical technology solutions.</p></div>
+  <div class="footer-col"><h4>Services</h4><a href="services.html">Web Development</a><a href="services.html">App Development</a><a href="software-development.html">Software Dev</a></div>
+  <div class="footer-col"><h4>Company</h4><a href="about.html">About Us</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div>
+  <div class="footer-col"><h4>For Students</h4><a href="services.html">Mentorship</a><a href="services.html">Project Help</a><a href="services.html">Freelancing</a></div>
+</div><div class="footer-bottom"><p>&copy; 2026 Infinity Tech Nexus. All rights reserved.</p></div></div></footer>
+<button class="chatbot-toggle" aria-label="Chat">💬</button>
+<div class="chatbot-widget"><div class="chatbot-header"><h4>∞ Chat with Us</h4><button class="chatbot-close">&times;</button></div><div class="chatbot-messages"><div class="chat-msg bot">Hi! 👋 Ask about our projects!</div></div><div class="chatbot-input"><input type="text" placeholder="Type a message..." aria-label="Chat"><button>Send</button></div></div>
 
 <script src="assets/js/main.js"></script>
 

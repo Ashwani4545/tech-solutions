@@ -2,46 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="Innovative technology solutions for businesses and students. Web development, app development, AI solutions.">
-  <meta name="keywords" content="web development, app development, student projects, tech solutions, AI services">
-  <meta name="author" content="TechSolutions">
-  <meta property="og:title" content="InfinityTech Nexus">
-  <meta property="og:description" content="Bridging students and industry through real-world projects.">
+  <meta name="description" content="Infinity Tech Nexus — Empowering students & businesses with premium tech solutions. Web development, AI, IoT, and more.">
+  <meta name="keywords" content="web development, app development, student projects, tech solutions, AI services, SaaS, IoT">
+  <meta name="author" content="Infinity Tech Nexus">
+  <meta property="og:title" content="Infinity Tech Nexus">
+  <meta property="og:description" content="Bridging students and industry through real-world projects and premium tech solutions.">
   <meta property="og:type" content="website">
   <meta name="google-site-verification" content="abc123xyz" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Infinity Tech Nexus </title>
+  <title>Infinity Tech Nexus — Premium Tech Solutions</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- Google tag (gtag.js) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-XXXXXXX');
   </script>
 </head>
 
 <body>
+<div class="scroll-progress"></div>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar" id="navbar">
   <div class="container">
     <div class="nav-content">
-      <a href="index.html" class="logo" title="TechSolutions Home" aria-label="TechSolutions Home">
-        <div class="logo-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <circle cx="16" cy="16" r="15" stroke="#4A9B7F" stroke-width="2"/>
-            <path d="M10 16L14 20L22 12" stroke="#4A9B7F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <a href="index.html" class="logo" title="Infinity Tech Nexus" aria-label="Infinity Tech Nexus Home">
+        <div class="infinity-logo">
+          <svg viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="infinityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#10B981"/>
+                <stop offset="50%" stop-color="#3B82F6"/>
+                <stop offset="100%" stop-color="#10B981"/>
+              </linearGradient>
+            </defs>
+            <path d="M15 15C15 8 8 4 4 10C0 16 4 26 15 15C26 4 30 16 26 22C22 28 15 22 15 15Z" stroke="url(#infinityGradient)"/>
+            <path d="M45 15C45 22 52 26 56 20C60 14 56 4 45 15C34 26 30 14 34 8C38 2 45 8 45 15Z" stroke="url(#infinityGradient)"/>
           </svg>
         </div>
+        <span class="logo-text">Infinity Tech Nexus</span>
       </a>
-      
+
       <div class="nav-links">
         <a href="services.html">Services</a>
         <a href="projects.html">Projects</a>
@@ -49,92 +55,130 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      
-      <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <line x1="3" y1="12" x2="21" y2="12" stroke-width="2"/>
+            <line x1="3" y1="6" x2="21" y2="6" stroke-width="2"/>
+            <line x1="3" y1="18" x2="21" y2="18" stroke-width="2"/>
+          </svg>
+        </button>
+        <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+      </div>
     </div>
   </div>
 </nav>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
+<!-- ====== HERO ====== -->
+<section class="hero" id="hero">
+  <canvas id="hero-canvas"></canvas>
   <div class="container">
-    <h1 class="hero-title">
-      Infinity Tech Nexus
-    </h1>
+    <p class="hero-label">🚀 Premium Tech Solutions</p>
+    <h1 class="hero-title">Infinity Tech Nexus</h1>
     <p class="hero-subtitle">
-    Empowering Students & Businesses with Practical Tech Solutions.<br>
-    Web • Analytics • Automation • Project Support
+      Empowering Students & Businesses with Practical Tech Solutions.<br>
+      Web • Analytics • Automation • AI • Project Support
     </p>
-    <a href="contact.html" class="btn-cta" onclick="trackGetStarted()">Get Started</a>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-cta" onclick="trackGetStarted()">Get Started →</a>
+      <a href="#services" class="btn-secondary">Explore Services</a>
+    </div>
   </div>
 </section>
-<!-- ================= STATS BAR ================= -->
+
+<!-- ====== STATS BAR ====== -->
 <div class="stats-bar">
   <div class="container stats-bar-inner">
-    <div class="stat-item"><span class="stat-number">20+</span> Projects Completed</div>
-    <div class="stat-item"><span class="stat-number">10+</span> Technologies Used</div>
-    <div class="stat-item"><span class="stat-number">Fast</span> 48 Hr Average Response Time</div>
+    <div class="stat-item">
+      <span class="stat-number" data-count="20" data-suffix="+">0</span>
+      <span class="stat-label">Projects Completed</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-count="10" data-suffix="+">0</span>
+      <span class="stat-label">Technologies Used</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-count="48">0</span>
+      <span class="stat-label">Hr Avg Response Time</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-count="15" data-suffix="+">0</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
   </div>
 </div>
 
-<!-- ================= SERVICES ================= -->
-<section class="services-section">
+<!-- ====== SERVICES ====== -->
+<section class="services-section" id="services">
   <div class="container">
     <h2 class="section-title">Our Services</h2>
-    
+    <p class="section-subtitle">End-to-end technology solutions for businesses and students</p>
+
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon icon-web"></div>
         <h3 class="service-title">Web Development</h3>
-        <p class="service-desc">Responsive,<br>modern websites</p>
+        <p class="service-desc">Responsive, modern websites & web applications built with cutting-edge technologies.</p>
       </div>
-      
+
+      <div class="service-card">
+        <div class="service-icon icon-app"></div>
+        <h3 class="service-title">App Development</h3>
+        <p class="service-desc">Custom mobile & web applications for iOS, Android, and cross-platform.</p>
+      </div>
+
       <div class="service-card">
         <div class="service-icon icon-devops"></div>
-        <h3 class="service-title">App Development<br></h3>
-        <p class="service-desc">Custom mobile & web<br>applications</p>
-      </div>1
-      
-      <div class="service-card">
-        <div class="service-icon icon-devops"></div>
-        <h3 class="service-title">DevOps<br></h3>
-        <p class="service-desc">CI/CD pipelines &<br>infrastructure automation</p>
+        <h3 class="service-title">DevOps</h3>
+        <p class="service-desc">CI/CD pipelines & infrastructure automation for seamless deployments.</p>
       </div>
-      
+
       <div class="service-card">
         <div class="service-icon icon-iot"></div>
         <h3 class="service-title">IoT Solutions</h3>
-        <p class="service-desc">Smart devices &<br>connected systems</p>
+        <p class="service-desc">Smart devices & connected systems for intelligent automation.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon icon-content"></div>
         <h3 class="service-title">Content Writing</h3>
-        <p class="service-desc">High-quality content<br>for your brand</p>
+        <p class="service-desc">High-quality content for your brand, blogs, and marketing.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon icon-branding"></div>
         <h3 class="service-title">Branding</h3>
-        <p class="service-desc">Logos, graphics<br>visual identity</p>
+        <p class="service-desc">Logos, graphics, and complete visual identity design.</p>
       </div>
 
-      <div class="service-card">  
+      <div class="service-card">
         <div class="service-icon icon-freelance"></div>
         <h3 class="service-title">Freelancing Opportunities</h3>
-        <p class="service-desc">For students to gain practical experience &<br>build your portfolio</p>
+        <p class="service-desc">For students to gain practical experience & build portfolios.</p>
       </div>
-    </div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
-<section class="projects-section">
+<!-- ====== SOFTWARE DEV BANNER ====== -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Software Development Services</h2>
+      <p>Web Apps, Mobile Apps, SaaS, APIs, and UI/UX — built with modern stacks and best practices.</p>
+      <a href="software-development.html" class="btn-cta">Explore Software Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROJECTS ====== -->
+<section class="projects-section" id="projects">
   <div class="container">
     <h2 class="section-title">Recent Projects</h2>
     <p class="section-subtitle">Explore our work across different technology domains</p>
-    
+
     <div class="projects-grid">
       <a href="projects-web.html" class="project-card domain-card">
         <div class="project-mockup laptop-mockup">
@@ -151,7 +195,7 @@
         <h3 class="project-title">Web Development</h3>
         <p class="domain-desc">Modern websites & web applications</p>
       </a>
-      
+
       <a href="projects-iot.html" class="project-card domain-card">
         <div class="project-mockup iot-mockup">
           <div class="iot-icon">
@@ -167,7 +211,7 @@
         <h3 class="project-title">Internet of Things</h3>
         <p class="domain-desc">Smart devices & connected systems</p>
       </a>
-      
+
       <a href="projects-datascience.html" class="project-card domain-card">
         <div class="project-mockup laptop-mockup">
           <div class="mockup-screen">
@@ -177,23 +221,66 @@
             </div>
           </div>
         </div>
-        <h3 class="project-title">Data Science - ML & AI</h3>
+        <h3 class="project-title">Data Science — ML & AI</h3>
         <p class="domain-desc">Machine learning & analytics solutions</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ====== TESTIMONIALS ====== -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">What People Say</h2>
+    <p class="section-subtitle">Trusted by students and businesses alike</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">Infinity Tech Nexus delivered our web platform on time with premium quality. Their attention to detail and modern design approach truly sets them apart.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div class="testimonial-info">
+            <h4>Rahul Sharma</h4>
+            <p>Startup Founder</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">As a student, the mentorship and project support I received was invaluable. I built a real portfolio and landed my first freelance project!</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">P</div>
+          <div class="testimonial-info">
+            <h4>Priya Patel</h4>
+            <p>Computer Science Student</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">Their data science team built a predictive model that improved our delivery accuracy by 35%. Highly professional and technically excellent.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div class="testimonial-info">
+            <h4>Amit Gupta</h4>
+            <p>E-Commerce Director</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
 <section class="about-section">
   <div class="container">
     <div class="about-content">
       <div class="about-text">
-        <h2 class="section-title">About Us</h2>
+        <h2 class="section-title" style="text-align:left;">About Us</h2>
         <p>
-          We are a team of experienced designers, developers, 
-          and strategists dedicated to providing tailored tech 
-          solutions that drive business success.
+          We are a team of experienced designers, developers,
+          and strategists dedicated to providing tailored tech
+          solutions that drive business success and empower the next generation of builders.
         </p>
       </div>
       <div class="about-cta">
@@ -203,14 +290,65 @@
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ====== FOOTER ====== -->
 <footer class="footer">
   <div class="container">
-    <p>&copy; 2026 InfinityTech Nexus. All rights reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-size:1.5rem;margin-bottom:1rem;">∞ Infinity Tech Nexus</div>
+        <p>Empowering students and businesses with practical, modern technology solutions.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub">💻</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Web Development</a>
+        <a href="services.html">App Development</a>
+        <a href="services.html">Data & AI</a>
+        <a href="services.html">IoT Solutions</a>
+        <a href="software-development.html">Software Dev</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>For Students</h4>
+        <a href="services.html">Mentorship</a>
+        <a href="services.html">Project Help</a>
+        <a href="services.html">Portfolio Building</a>
+        <a href="services.html">Freelancing</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Infinity Tech Nexus. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<!-- ====== CHATBOT ====== -->
+<button class="chatbot-toggle" aria-label="Chat with us">💬</button>
+<div class="chatbot-widget">
+  <div class="chatbot-header">
+    <h4>∞ Chat with Us</h4>
+    <button class="chatbot-close">&times;</button>
+  </div>
+  <div class="chatbot-messages">
+    <div class="chat-msg bot">Hi! 👋 I'm the Infinity Tech Nexus assistant. Ask me about our services, projects, or pricing!</div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" placeholder="Type a message..." aria-label="Chat message">
+    <button>Send</button>
+  </div>
+</div>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>
