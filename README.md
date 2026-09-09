@@ -1,107 +1,85 @@
-# TechSolutions Website 
-## Overview
-This website has been completely redesigned to match the clean, modern aesthetic from the provided design reference. The new design features a light, minimalist approach with professional styling.
+# Infinity Tech Nexus
 
-## File Structure
-```
-├── index.html
-├── services.html
-├── about.html
-├── contact.html
-├── portfolio.html
-└── assets/
-    ├── css/
-    │   └── style.css
-    └── js/
-        └── main.js
-```
+Production-ready company website, rebuilt with Next.js 14 (App Router), TypeScript, and Tailwind CSS.
 
-## Features
+## Stack
 
-### Visual Enhancements
-- Smooth hover transitions on all interactive elements
-- Card shadow effects for depth
-- Custom SVG icons for services
-- Device mockups with realistic content
-- Staggered fade-in animations
+- **Next.js 14** (App Router, static generation where possible)
+- **TypeScript** — strict mode
+- **Tailwind CSS** — design tokens matching the brand (emerald/blue, Inter + Space Grotesk)
+- **next/font** — self-hosted Google Fonts, no layout shift
+- Zero client-side framework bloat — forms and interactivity are small, targeted client components
 
-### Responsive Design
-- Mobile-first approach
-- Breakpoints at 768px and 480px
-- Flexible grid layouts
-- Hidden navigation on mobile (ready for hamburger menu)
+## Getting started locally
 
-### Accessibility
-- Semantic HTML5 markup
-- Proper heading hierarchy
-- Form labels and inputs
-- Focus states on interactive elements
-
-## Browser Support
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Setup Instructions
-
-1. **Extract Files**
-   - Ensure all HTML files are in the root directory
-   - Verify assets/css/ and assets/js/ folders exist
-
-2. **Font Loading**
-   - The design uses Google Fonts (DM Sans)
-   - Internet connection required for first load
-   - Fonts are cached for offline use
-
-3. **Testing**
-   - Open index.html in a web browser
-   - Test all navigation links
-   - Check contact form functionality
-   - Verify responsive behavior
-
-## Customization
-
-### Colors
-All colors are defined as CSS variables in style.css:
-```css
-:root {
-  --color-bg: #F5F3EF;
-  --color-primary: #4A9B7F;
-  --color-text: #1A1A1A;
-  /* etc... */
-}
+```bash
+npm install
+cp .env.example .env.local   # then fill in NEXT_PUBLIC_FORM_ENDPOINT
+npm run dev
 ```
 
-### Typography
-Change font family in the `:root` section:
-```css
---font-family: 'DM Sans', sans-serif;
+Visit `http://localhost:3000`.
+
+## Wiring the contact form
+
+The contact form posts to whatever URL you set as `NEXT_PUBLIC_FORM_ENDPOINT` in `.env.local`.
+
+1. Create a free account at [Formspree](https://formspree.io) (or [Web3Forms](https://web3forms.com))
+2. Create a form, copy its endpoint URL
+3. Set `NEXT_PUBLIC_FORM_ENDPOINT=https://formspree.io/f/xxxxxxx` in `.env.local`
+4. Redeploy
+
+Until this is set, the form will show a friendly error instead of silently failing.
+
+## Deploying (recommended path)
+
+1. **Buy a domain** — e.g. on [Namecheap](https://namecheap.com) (~$10–15/yr for `.com`)
+2. **Push this project to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin <your-repo-url>
+   git push -u origin main
+   ```
+3. **Deploy to [Vercel](https://vercel.com)** — import the GitHub repo, it auto-detects Next.js. Add your environment variables (`NEXT_PUBLIC_FORM_ENDPOINT`) in the Vercel project settings.
+4. **Point your domain at Vercel** — in Vercel's project settings → Domains, add your domain, then update your registrar's DNS records as instructed (usually one A record + one CNAME).
+5. Update `site.url` in `lib/data.ts` to your real domain — this feeds metadata, sitemap, and Open Graph tags.
+
+## Project structure
+
+```
+app/                  Routes (App Router)
+  page.tsx            Home
+  services/            Services
+  software-development/
+  projects/            Projects hub + /projects/[slug] (web, iot, data-science)
+  portfolio/            Filterable portfolio
+  about/
+  contact/              Contact form
+  sitemap.ts            Auto-generated sitemap.xml
+  robots.ts             Auto-generated robots.txt
+components/            Reusable UI (Navbar, Footer, cards, form, etc.)
+lib/data.ts             All site content in one place — edit this to update copy
 ```
 
-### Animations
-Adjust animation timing in the animations section of style.css
+## Editing content
 
-## Performance
-- Minimal external dependencies (only Google Fonts)
-- Optimized CSS with modern properties
-- No heavy JavaScript frameworks
-- Fast page load times
+Almost everything (services, projects, testimonials, portfolio items, stats) lives in
+`lib/data.ts`. Edit that file rather than hunting through JSX.
 
-## Future Enhancements
-- Mobile hamburger menu
-- Image galleries for projects
-- Client testimonials section
-- Blog integration
-- Dark mode toggle
-- Smooth scroll animations
-- Form backend integration
+## What's already handled
 
-## Notes
-- All images are currently SVG icons or CSS-generated mockups
-- Contact form requires backend integration for actual submission
-- Portfolio projects are placeholder content
-- Resume PDF links need to be updated with actual file paths
+- Real content pulled from the original site (no more "0" stat counters — counters animate on
+  scroll from real numbers)
+- Dark mode (toggle in the navbar, respects system preference, no flash on load)
+- SEO: per-page metadata, Open Graph tags, sitemap.xml, robots.txt
+- Security headers (via `next.config.mjs`)
+- Fully responsive, keyboard-accessible, respects `prefers-reduced-motion`
+- No emoji icons — clean SVG icon set throughout
 
-## Credits
-Design inspired by modern SaaS and agency websites with a focus on clean, professional aesthetics.
+## Not yet wired (intentionally left for you)
+
+- Analytics — add your GA4 ID to `NEXT_PUBLIC_GA_ID` and wire it in `app/layout.tsx` if you want it
+- Real testimonial photos / client logos — currently initials-based avatars
+- Live chat widget — removed; the old one had no backend, so add a real provider (Crisp, Tawk.to, Intercom) if wanted
