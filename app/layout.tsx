@@ -1,37 +1,29 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { OrganizationJsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/data";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Premium Tech Solutions`,
+    default: `${site.name} — ${site.positioning}`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
   keywords: [
-    "web development",
-    "app development",
-    "student mentorship",
-    "AI services",
-    "SaaS development",
-    "IoT solutions",
-    "data science",
+    "software engineering company",
+    "AI development",
+    "digital product studio",
+    "custom software development India",
+    "cloud and DevOps",
+    "data analytics platform",
   ],
   openGraph: {
     title: site.name,
@@ -48,28 +40,17 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-// Runs before paint to avoid a flash of the wrong theme.
-const themeScript = `
-(function() {
-  try {
-    var stored = localStorage.getItem('theme');
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var isDark = stored ? stored === 'dark' : prefersDark;
-    if (isDark) document.documentElement.classList.add('dark');
-  } catch (e) {}
-})();
-`;
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <OrganizationJsonLd />
       </head>
-      <body className="flex min-h-screen flex-col font-sans">
+      <body className="flex min-h-screen flex-col font-sans noise">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -1,116 +1,91 @@
 import Link from "next/link";
-import { HeroInfinity } from "@/components/HeroInfinity";
-import { StatCounter } from "@/components/StatCounter";
-import { ServiceCard } from "@/components/ServiceCard";
-import { TestimonialCard } from "@/components/TestimonialCard";
-import { CTASection } from "@/components/CTASection";
-import { businessServices, projectDomains, stats, testimonials } from "@/lib/data";
+import { FadeIn } from "@/components/FadeIn";
+import { HeroVisual } from "@/components/HeroVisual";
+import { Capabilities } from "@/components/Capabilities";
+import { ProblemSolutionSection } from "@/components/ProblemSolutionSection";
+import { FeaturedWork } from "@/components/FeaturedWork";
+import { Industries } from "@/components/Industries";
+import { ProcessTimeline } from "@/components/ProcessTimeline";
+import { WhyUs } from "@/components/WhyUs";
+import { StudentSolutions } from "@/components/StudentSolutions";
+import { FinalCTA } from "@/components/FinalCTA";
+import { featuredProjects } from "@/lib/data";
 
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="container grid items-center gap-12 py-20 md:grid-cols-2 md:py-28">
+      {/* HERO */}
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <div className="container grid items-center gap-14 md:grid-cols-2">
           <div>
-            <p className="text-sm font-medium text-emerald">Web · Data · Automation · AI</p>
-            <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl dark:text-white">
-              Practical technology, built by people who ship.
-            </h1>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-slate-soft">
-              We build web platforms, apps, and data products for businesses — and pair students
-              with real projects and mentorship instead of tutorials.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="rounded-full bg-emerald px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-emerald-dark"
-              >
-                Start a project
-              </Link>
-              <Link
-                href="/services"
-                className="rounded-full border border-ink/10 px-7 py-3.5 text-sm font-semibold text-ink transition hover:border-emerald/40 hover:text-emerald dark:border-white/15 dark:text-white"
-              >
-                Explore services
-              </Link>
-            </div>
+            <FadeIn>
+              <h1 className="font-display text-display-xl font-semibold text-white balance">
+                We build technology that moves businesses forward.
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <p className="mt-6 max-w-md text-ink-muted">
+                From AI-powered products to scalable software platforms, we design, engineer and
+                deliver digital solutions built around your goals.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="mt-10 flex flex-wrap items-center gap-6">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-cyan px-7 py-3.5 text-sm font-semibold text-base transition-all duration-300 ease-premium hover:bg-cyan-bright"
+                >
+                  Start a Conversation <span aria-hidden>→</span>
+                </Link>
+                <Link
+                  href="/work"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white transition hover:text-cyan"
+                >
+                  Explore Our Work <span aria-hidden>→</span>
+                </Link>
+              </div>
+            </FadeIn>
           </div>
-          <div className="flex justify-center md:justify-end">
-            <HeroInfinity />
-          </div>
+
+          <FadeIn delay={0.15} className="flex justify-center md:justify-end">
+            <HeroVisual />
+          </FadeIn>
         </div>
       </section>
 
-      <section className="border-y border-ink/5 bg-paper-alt py-14 dark:border-white/5 dark:bg-paper-darkAlt">
-        <div className="container grid grid-cols-2 gap-8 sm:grid-cols-4">
-          {stats.map((s) => (
-            <StatCounter key={s.label} value={s.value} suffix={s.suffix} label={s.label} />
-          ))}
-        </div>
-      </section>
+      <Capabilities />
+      <ProblemSolutionSection />
 
-      <section className="container py-20">
-        <div className="max-w-xl">
-          <h2 className="font-display text-3xl font-semibold text-ink dark:text-white">Our services</h2>
-          <p className="mt-3 text-slate-soft">
-            End-to-end technology solutions for businesses, plus freelancing paths for students.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {businessServices.map((s, i) => (
-            <ServiceCard key={s.title} service={s} index={i} />
-          ))}
-        </div>
-      </section>
-
-      <CTASection
-        heading="Software development services"
-        body="Web apps, mobile apps, SaaS, APIs, and UI/UX — built with modern stacks and best practices."
-        buttonLabel="Explore software services"
-        href="/software-development"
-      />
-
-      <section className="container py-20">
-        <div className="max-w-xl">
-          <h2 className="font-display text-3xl font-semibold text-ink dark:text-white">Recent projects</h2>
-          <p className="mt-3 text-slate-soft">Explore our work across different technology domains.</p>
-        </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          {projectDomains.map((domain) => (
-            <Link
-              key={domain.slug}
-              href={`/projects/${domain.slug}`}
-              className="group rounded-2xl border border-ink/8 bg-white p-7 transition hover:border-emerald/30 dark:border-white/10 dark:bg-paper-darkAlt"
-            >
-              <h3 className="font-display text-lg font-semibold text-ink dark:text-white">{domain.title}</h3>
-              <p className="mt-2 text-sm text-slate-soft">{domain.summary}</p>
-              <span className="mt-4 inline-block text-sm font-medium text-emerald">
-                View projects
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="border-t border-ink/5 bg-paper-alt py-20 dark:border-white/5 dark:bg-paper-darkAlt">
+      {/* FEATURED WORK */}
+      <section className="border-t border-line py-28">
         <div className="container">
-          <div className="max-w-xl">
-            <h2 className="font-display text-3xl font-semibold text-ink dark:text-white">What people say</h2>
-            <p className="mt-3 text-slate-soft">Trusted by students and businesses alike.</p>
+          <FadeIn>
+            <p className="text-sm font-medium text-cyan">Selected work</p>
+          </FadeIn>
+          <FadeIn delay={0.05}>
+            <h2 className="mt-4 max-w-xl font-display text-display-lg font-semibold text-white balance">
+              Built for impact.
+            </h2>
+          </FadeIn>
+          <div className="mt-14">
+            <FeaturedWork projects={featuredProjects.slice(0, 2)} />
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.name} {...t} />
-            ))}
-          </div>
+          <FadeIn delay={0.1}>
+            <Link
+              href="/work"
+              className="mt-10 inline-flex items-center gap-2 text-sm font-medium text-white transition hover:text-cyan"
+            >
+              View all work <span aria-hidden>→</span>
+            </Link>
+          </FadeIn>
         </div>
       </section>
 
-      <CTASection
-        heading="Ready to work together?"
-        body="Whether you're a student looking for mentorship or a business needing tech solutions — let's connect."
-        buttonLabel="Get in touch"
-      />
+      <Industries />
+      <ProcessTimeline />
+      <WhyUs />
+      <StudentSolutions />
+      <FinalCTA />
     </>
   );
 }

@@ -3,33 +3,33 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    color-scheme: light;
-  }
-  .dark {
-    color-scheme: dark;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-paper text-ink antialiased dark:bg-paper-dark dark:text-slate-100;
+    @apply bg-base text-ink antialiased;
   }
 
   ::selection {
-    @apply bg-emerald/20;
+    @apply bg-cyan/25 text-white;
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-emerald ring-offset-2 ring-offset-paper dark:ring-offset-paper-dark;
+    @apply outline-none ring-1 ring-cyan ring-offset-2 ring-offset-base;
   }
 }
 
 @layer utilities {
   .balance {
     text-wrap: balance;
+  }
+  .fine-border {
+    @apply border border-line;
+  }
+  .noise {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.035) 1px, transparent 0);
+    background-size: 26px 26px;
   }
 }
 

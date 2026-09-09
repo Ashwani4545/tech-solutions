@@ -1,134 +1,64 @@
-<div align="center">
+# ∞ Infinity Techies
 
-# ∞ Infinity Tech Nexus
+**Ideas Today. A Brighter Tomorrow.**
 
-**Practical technology, built by people who ship.**
+A modern technology and software engineering company website, built with Next.js 14, TypeScript,
+Tailwind CSS, and Framer Motion.
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/license-Private-lightgrey)]()
+## About
 
-[Website](https://infinitytechnexus.com) · [Services](#-what-we-do) · [Contact](#-contact)
+Infinity Techies designs, engineers and delivers digital products, software platforms and
+AI-powered systems for businesses, startups and organizations — in India and internationally. A
+secondary Student Solutions offering provides project development, mentorship, documentation,
+deployment and presentation support for students — positioned as a separate pathway, not the
+core brand identity.
 
-</div>
+## Stack
 
----
+- **Next.js 14** (App Router, fully static generation)
+- **TypeScript** — strict mode
+- **Tailwind CSS** — dark premium design system (near-black base, electric cyan accent)
+- **Framer Motion** — restrained scroll-triggered animations
+- **next/font** — Manrope (display) + Inter (body), self-hosted, no layout shift
 
-## 🏢 About Infinity Tech Nexus
-
-Infinity Tech Nexus is a technology-focused initiative bridging the gap between **students and
-industry**. We build real, production-grade software for businesses — and give students real
-projects and mentorship instead of tutorials.
-
-We run two things at once, under one roof:
-
-1. **A software development studio** — websites, apps, SaaS platforms, APIs, and data/ML products
-   for businesses, delivered end-to-end.
-2. **A student mentorship program** — academic project help, portfolio building, freelancing
-   opportunities, and guidance from people who actually build for a living.
-
-**Our vision:** Build industry-ready talent through practical exposure and real-world project
-experience that bridges the gap between academia and industry.
-
-**Our mission:** Deliver affordable, high-quality tech solutions globally while empowering the
-next generation of developers, designers, and data scientists.
-
-**Our approach:** Learn by building. Build for impact.
-
----
-
-## 🛠 What We Do
-
-### For companies
-| Service | What it covers |
-|---|---|
-| Web Development | Responsive, SEO-optimized websites and web apps on scalable, modern infrastructure |
-| App Development | Custom iOS, Android, and cross-platform mobile apps |
-| DevOps | CI/CD pipelines and infrastructure automation for reliable deployments |
-| IoT Solutions | Connected devices and monitoring systems for automation |
-| Data & Automation | Analytics dashboards, workflow automation, AI-assisted decision tools |
-| Branding | Logos, visual identity, and design systems |
-
-### Software development (deeper dive)
-Web apps (React/Next.js/Node), mobile apps (React Native/Flutter), full-stack SaaS platforms with
-subscription billing, REST/GraphQL APIs on microservices architecture, and UI/UX design from
-research through prototyping.
-
-### For students
-Academic project assistance (ideation → documentation → viva prep), 1:1 mentorship on tech stack
-and architecture decisions, portfolio building with real GitHub/deployment work, skill development
-alongside senior engineers, and technical content writing.
-
-### Domains we build in
-- **Web Development** — modern websites and web applications
-- **Internet of Things** — smart devices and connected systems
-- **Data Science — ML & AI** — machine learning and analytics solutions
-
----
-
-## 💻 This Repository
-
-This repo is the company website — rebuilt as a production-ready app rather than static HTML.
-
-**Stack:** Next.js 14 (App Router) · TypeScript (strict) · Tailwind CSS · next/font
+## Getting started
 
 ```bash
 npm install
-cp .env.example .env.local   # add your Formspree/Web3Forms endpoint
-npm run dev                  # http://localhost:3000
+cp .env.example .env.local
+npm run dev
 ```
 
-### Project structure
+### Environment variables
+
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_FORM_ENDPOINT` | Formspree or Web3Forms endpoint for the contact form |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp business number (international format, digits only). The floating WhatsApp button only renders once this is set. |
+| `NEXT_PUBLIC_GA_ID` | Optional GA4 measurement ID |
+
+## Structure
 
 ```
-app/                    Routes (App Router)
-  page.tsx               Home
-  services/               Services
-  software-development/
-  projects/               Projects hub + /projects/[slug] (web, iot, data-science)
-  portfolio/               Filterable portfolio
-  about/
-  contact/                 Contact form
-  sitemap.ts               Auto-generated sitemap.xml
-  robots.ts                Auto-generated robots.txt
-components/              Reusable UI (Navbar, Footer, cards, form, etc.)
-lib/data.ts               All site content — services, projects, testimonials, stats
+app/
+  page.tsx              Home
+  solutions/              Capabilities detail
+  industries/              Industries detail
+  work/                    All case studies
+  company/                  About, process, why us, careers, student solutions
+  contact/                  Enquiry form (supports ?type=student)
+  sitemap.ts / robots.ts    Auto-generated
+components/                Navbar, Footer, section components, ContactForm, WhatsAppButton
+lib/data.ts                 All copy — capabilities, projects, industries, process, etc.
 ```
 
-Almost all copy (services, projects, testimonials, stats) lives in `lib/data.ts` — edit that file
-to update the site rather than hunting through JSX.
+Edit `lib/data.ts` to change content. Add real projects to `featuredProjects` — only include an
+`outcome` field once there's a real, confirmed result; don't fabricate metrics or clients.
 
-### Deploying
+## Deploying
 
-1. Buy a domain (e.g. [Namecheap](https://namecheap.com))
-2. Push this repo to GitHub
-3. Import it into [Vercel](https://vercel.com) — auto-detects Next.js
-4. Add `NEXT_PUBLIC_FORM_ENDPOINT` in Vercel's Environment Variables
-5. Point your domain at Vercel (Project Settings → Domains)
-6. Update `site.url` in `lib/data.ts` to your live domain
-
-### What's already handled
-- Real content, no placeholder "0" stats — counters animate from real numbers
-- Dark mode, no flash on load
-- Per-page SEO metadata, Open Graph tags, sitemap.xml, robots.txt
-- Security headers, full keyboard accessibility, `prefers-reduced-motion` support
-
-### Not yet wired (intentional)
-- Analytics (`NEXT_PUBLIC_GA_ID` placeholder — wire it in `app/layout.tsx` if wanted)
-- Real testimonial photos / client logos
-- Live chat widget (add a real provider — Crisp, Tawk.to, Intercom — if wanted)
-
----
-
-## 📬 Contact
-
-- **Email:** contact@infinitytechnexus.com
-- **Response time:** within 48 hours
-- **Availability:** worldwide, remote-first
-
----
-
-<div align="center">
-<sub>&copy; 2026 Infinity Tech Nexus. All rights reserved.</sub>
-</div>
+1. Push to GitHub
+2. Import into [Vercel](https://vercel.com) — `vercel.json` is already configured
+3. Set environment variables in Vercel's project settings
+4. Point your domain at Vercel
+5. Update `site.url` in `lib/data.ts` to your live domain

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "./Logo";
-import { ThemeToggle } from "./ThemeToggle";
 import { navLinks } from "@/lib/data";
 
 export function Navbar() {
@@ -12,23 +11,21 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/5 bg-paper/85 backdrop-blur-md dark:border-white/5 dark:bg-paper-dark/85">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" onClick={() => setOpen(false)} aria-label="Infinity Tech Nexus home">
+    <header className="sticky top-0 z-50 border-b border-line bg-base/80 backdrop-blur-md">
+      <div className="container flex h-[68px] items-center justify-between">
+        <Link href="/" aria-label="Infinity Techies home" onClick={() => setOpen(false)}>
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">
           {navLinks.map((link) => {
             const active = pathname === link.href || pathname.startsWith(link.href + "/");
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  active
-                    ? "text-emerald"
-                    : "text-ink/70 hover:text-ink dark:text-white/70 dark:hover:text-white"
+                className={`text-[13.5px] font-medium tracking-wide transition-colors ${
+                  active ? "text-white" : "text-ink-muted hover:text-white"
                 }`}
               >
                 {link.label}
@@ -37,23 +34,20 @@ export function Navbar() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <ThemeToggle />
-          <Link
-            href="/contact"
-            className="rounded-full bg-emerald px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-dark"
-          >
-            Get a free quote
-          </Link>
-        </div>
+        <Link
+          href="/contact"
+          className="hidden items-center gap-2 rounded-full border border-lineStrong px-5 py-2.5 text-[13.5px] font-medium text-white transition-all duration-300 ease-premium hover:border-cyan hover:text-cyan md:inline-flex"
+        >
+          Let&rsquo;s Talk <span aria-hidden>→</span>
+        </Link>
 
         <button
-          className="flex h-9 w-9 items-center justify-center text-ink md:hidden dark:text-white"
+          className="flex h-9 w-9 items-center justify-center text-white md:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
             {open ? (
               <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
             ) : (
@@ -64,28 +58,25 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-ink/5 bg-paper px-6 py-4 md:hidden dark:border-white/5 dark:bg-paper-dark">
-          <nav className="flex flex-col gap-4" aria-label="Mobile">
+        <div className="border-t border-line bg-base px-6 py-6 md:hidden">
+          <nav className="flex flex-col gap-5" aria-label="Mobile">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-base font-medium text-ink/80 dark:text-white/80"
+                className="text-sm font-medium text-ink-muted"
               >
                 {link.label}
               </Link>
             ))}
-            <div className="flex items-center justify-between pt-2">
-              <ThemeToggle />
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="rounded-full bg-emerald px-5 py-2.5 text-sm font-semibold text-white"
-              >
-                Get a free quote
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-lineStrong px-5 py-2.5 text-sm font-medium text-white"
+            >
+              Let&rsquo;s Talk →
+            </Link>
           </nav>
         </div>
       )}
